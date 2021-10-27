@@ -22,5 +22,4 @@ func main() {
 	if err := a.Start(); err != nil {
 		log.Fatal(err)
 	}
-
 }
