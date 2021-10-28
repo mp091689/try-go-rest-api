@@ -19,9 +19,8 @@ func NewRepository(c *Config) *Repository {
 }
 
 func (r *Repository) Open() error {
-	//user:password@/dbname
 	f := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s",  r.config.User, r.config.Password, r.config.Host, r.config.Port, r.config.Name)
-	fmt.Println(f)
+
 	db, err := sql.Open("mysql", f)
 	if err != nil {
 		return err
