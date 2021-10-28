@@ -28,7 +28,7 @@ func NewConfig(path string) *Config {
 
 	p := os.Getenv("DB_PORT")
 	if p == "" {
-		p = "3000"
+		p = "3306"
 	}
 
 	n := os.Getenv("DB_NAME")

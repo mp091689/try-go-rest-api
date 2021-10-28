@@ -9,9 +9,9 @@ import (
 )
 
 type Config struct {
-	Host     string
-	Port     string
-	LogLevel string
+	Host       string
+	Port       string
+	LogLevel   string
 	Repository *repository.Config
 }
 
@@ -22,9 +22,6 @@ func NewConfig(path string) *Config {
 	}
 
 	h := os.Getenv("HOST")
-	if h == "" {
-		h = "localhost"
-	}
 
 	p := os.Getenv("PORT")
 	if p == "" {
@@ -37,9 +34,9 @@ func NewConfig(path string) *Config {
 	}
 
 	return &Config{
-		Host:     h,
-		Port:     p,
-		LogLevel: l,
+		Host:       h,
+		Port:       p,
+		LogLevel:   l,
 		Repository: repository.NewConfig(path),
 	}
 }
